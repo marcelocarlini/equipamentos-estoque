@@ -39,7 +39,7 @@ function EquipLista(props) {
                                 <TableCell component="th" scope="row"> {row.modelo.toUpperCase()}</TableCell>
                                 <TableCell align="right">{row.n_serie}</TableCell>
                                 <TableCell align="right">{row.patrimonio.toUpperCase()}</TableCell>
-                                <TableCell align="right">{row.patrimonio.toUpperCase()}</TableCell>
+                                <TableCell align="right">{row.categoria.toUpperCase()}</TableCell>
 
                             </TableRow>
                         ))}
