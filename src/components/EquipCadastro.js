@@ -9,6 +9,14 @@ function EquipCadastro(props) {
     const [patrimonio, setPatrimonio] = React.useState("")
     const [categoria, setCategoria] = React.useState("")
     const [categoriaOptions, setCategoriaOptions] = React.useState([])
+    const [status, setStatus] = React.useState('');
+
+    const statusOptions = [
+        { id: 1, status: 'EM USO' },
+        { id: 2, status: 'DISPONÍVEL' },
+        { id: 3, status: 'BAIXA' },
+        { id: 4, status: 'RETORNO' },
+    ];
 
     React.useEffect(() => {
         axios.get("https://1ruolljjx9.execute-api.us-east-1.amazonaws.com/listar-categorias").then(
@@ -24,13 +32,15 @@ function EquipCadastro(props) {
             "modelo": modelo,
             "n_serie": n_serie,
             "patrimonio": patrimonio,
-            "categoria": categoria
+            "categoria": categoria,
+            "status": status
         }).then(r => {
             alert("Produto foi cadastrado")
             setModelo("");
             setN_serie("");
             setPatrimonio("");
             setCategoria("");
+            setStatus("");
         })
     }
     return (
@@ -57,6 +67,20 @@ function EquipCadastro(props) {
                                         <MenuItem value={c.id}>{c.nome}</MenuItem>
                                     ))
                                 }
+                            </Select>
+                        </FormControl>
+                        <FormControl style={{ marginTop: "10px" }} fullWidth>
+                            <InputLabel id="status-label">Status</InputLabel>
+                            <Select
+                                labelId="status-label"
+                                id="status-select"
+                                value={status}
+                                label="Status"
+                                onChange={(e) => { setStatus(e.target.value) }}
+                            >
+                                {statusOptions.map(s => (
+                                    <MenuItem value={s.id}>{s.status}</MenuItem>
+                                ))}
                             </Select>
                         </FormControl>
                         <Button style={{ marginTop: "10px" }} variant="contained" onClick={() => { cadastroProduto() }}>Salvar</Button>

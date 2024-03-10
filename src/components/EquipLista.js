@@ -28,6 +28,7 @@ function EquipLista(props) {
                             <TableCell align="right">Numero de Série</TableCell>
                             <TableCell align="right">Patrimonio</TableCell>
                             <TableCell align="right">Categoria</TableCell>
+                            <TableCell align="right">Status</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -41,6 +42,7 @@ function EquipLista(props) {
                                 <TableCell align="right">{row.n_serie}</TableCell>
                                 <TableCell align="right">{row.patrimonio.toUpperCase()}</TableCell>
                                 <TableCell align="right">{row.nome}</TableCell>
+                                <TableCell align="right">{row.status}</TableCell>
 
                             </TableRow>
                         ))}
