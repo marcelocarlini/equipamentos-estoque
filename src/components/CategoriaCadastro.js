@@ -12,6 +12,7 @@ function CategoriaCadastro(props) {
             "nome": nome,
         }).then(r => {
             alert("Categoria foi cadastrada")
+            setNome("");
 
         })
     }

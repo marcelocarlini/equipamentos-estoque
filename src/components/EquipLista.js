@@ -11,6 +11,7 @@ function EquipLista(props) {
         axios.get("https://1ruolljjx9.execute-api.us-east-1.amazonaws.com/listar-equipamentos").then(
             r => {
                 setRows(r.data.response)
+                console.log(rows)
             }
         )
     }, [])
@@ -32,14 +33,14 @@ function EquipLista(props) {
                     <TableBody>
                         {rows.map((row) => (
                             <TableRow
-                                key={row.modelo}
+                                key={row.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 {/* <TableCell component="th" scope="row">{row.id}</TableCell> */}
                                 <TableCell component="th" scope="row"> {row.modelo.toUpperCase()}</TableCell>
                                 <TableCell align="right">{row.n_serie}</TableCell>
                                 <TableCell align="right">{row.patrimonio.toUpperCase()}</TableCell>
-                                <TableCell align="right">{row.categoria.toUpperCase()}</TableCell>
+                                <TableCell align="right">{row.categoria}</TableCell>
 
                             </TableRow>
                         ))}
