@@ -2,6 +2,7 @@ import { Button, Card, CardContent, FormControl, InputLabel, MenuItem, Select, T
 import axios from 'axios'
 import React from 'react'
 
+
 function EquipCadastro(props) {
 
     const [modelo, setModelo] = React.useState("")
@@ -33,7 +34,7 @@ function EquipCadastro(props) {
             "n_serie": n_serie,
             "patrimonio": patrimonio,
             "categoria": categoria,
-            "status": status
+            "status": statusOptions.find(s => s.id === status).status
         }).then(r => {
             alert("Produto foi cadastrado")
             setModelo("");
