@@ -44,12 +44,12 @@ function EquipCadastro(props) {
                         <TextField value={n_serie} onChange={(e) => { setN_serie(e.target.value.toUpperCase()) }} style={{ marginTop: "10px" }} id="outlined-basic" label="Numero de Série" variant="outlined" />
                         <TextField value={patrimonio} onChange={(e) => { setPatrimonio(e.target.value.toUpperCase()) }} style={{ marginTop: "10px" }} id="outlined-basic" label="Patrimonio" variant="outlined" />
                         <FormControl style={{ marginTop: "10px" }} fullWidth>
-                            <InputLabel id="categoria-label">Categoria</InputLabel>
+                            <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
                             <Select
-                                labelId="categoria-label"
+                                labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={categoria}
-                                label="Categorias"
+                                label="Categoria"
                                 onChange={(e) => { setCategoria(e.target.value) }}
                             >
                                 {
