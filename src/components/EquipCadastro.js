@@ -45,7 +45,7 @@ function EquipCadastro(props) {
         })
     }
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto', width: '100%' }}>
 
             <Card style={{ marginTop: '100px', width: "70%" }}>
                 <CardContent>
