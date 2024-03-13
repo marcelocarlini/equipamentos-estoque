@@ -101,7 +101,7 @@ export default function Menu() {
     }
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', width: '100%' }}>
 
 
             <CssBaseline />
