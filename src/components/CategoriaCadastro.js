@@ -18,10 +18,10 @@ function CategoriaCadastro(props) {
     }
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto', width: '70%' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto' }}>
             <Card style={{ marginTop: '100px', width: "70%" }}>
                 <CardContent>
-                    <div style={{ fontSize: "18px" }}>{props.texto}</div>
+                    <div style={{ fontSize: "18px", fontWeight: "bold" }}>{props.texto}</div>
                     <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
                         <TextField value={nome} onChange={(e) => { setNome(e.target.value.toUpperCase()) }} style={{ marginTop: "10px" }} id="outlined-basic" label="Nome" variant="outlined" />
                         <Button style={{ marginTop: "10px" }} variant="contained" onClick={() => { cadastroCategoria() }}>Salvar</Button>
