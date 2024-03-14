@@ -24,7 +24,7 @@ import CategoriaCadastro from './CategoriaCadastro';
 import CategoriaLista from './CategoriaLista';
 import { Container } from '@mui/material';
 import { Add, AddLink, Category, InsertDriveFile, ViewList } from '@mui/icons-material';
-import Vinculacao from './Vinculacao';
+import Login from './Login';
 
 const drawerWidth = 240;
 
@@ -88,7 +88,7 @@ export default function Menu() {
 
     function seletorDeComponentes() {
         if (visivel === 1) {
-            return <Vinculacao texto={"Vinculação"} />
+            return <Login texto={"Login"} />
         } else if (visivel === 2) {
             return <EquipCadastro texto={"Cadastro de equipamentos"} />
         } else if (visivel === 3) {
@@ -154,7 +154,7 @@ export default function Menu() {
                             <ListItemIcon>
                                 <AddLink />
                             </ListItemIcon>
-                            <ListItemText primary={"Vinculacao"} />
+                            <ListItemText primary={"Login"} />
                         </ListItemButton>
                     </ListItem>
                     <Divider />
