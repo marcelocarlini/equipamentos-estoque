@@ -1,10 +1,11 @@
 import { Box, Button, Card, CardContent, TextField } from '@mui/material'
 import React from 'react'
+import '../css/login.css';
 
 function Login() {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto' }}>
-            <Card style={{ marginTop: '100px', width: "70%", boxShadow: '0px 10px 8px rgba(0, 0, 0, 0.5)' }}>
+            <Card className="custom-card" style={{ marginTop: '100px', width: "30%", boxShadow: '0px 10px 8px rgba(0, 0, 0, 0.5)' }}>
                 <CardContent >
 
                     <div style={{ fontSize: "30px", fontWeight: "bold", textAlign: "center", textTransform: "uppercase", color: "#673ab7" }}> Login</div>
@@ -18,8 +19,6 @@ function Login() {
                 </CardContent>
             </Card>
         </Box >
-
-
     )
 }
 
