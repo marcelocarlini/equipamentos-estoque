@@ -1,5 +1,5 @@
 @media only screen and (max-width: 768px) {
   .custom-card {
-    width: 70% !important;
+    width: 100% !important;
   }
 }

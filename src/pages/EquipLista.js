@@ -19,7 +19,7 @@ function EquipLista(props) {
     return (
         <div style={{ marginTop: 100 }} >
             <h4 style={{ fontSize: "18px", fontWeight: "bold" }}>{props.texto}</h4>
-            <TableContainer component={Paper}>
+            <TableContainer className='custom-card' component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
