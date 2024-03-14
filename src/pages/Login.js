@@ -4,7 +4,7 @@ import React from 'react'
 function Login() {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto' }}>
-            <Card style={{ marginTop: '100px', width: "30%", boxShadow: '0px 10px 8px rgba(0, 0, 0, 0.5)' }}>
+            <Card style={{ marginTop: '100px', width: "70%", boxShadow: '0px 10px 8px rgba(0, 0, 0, 0.5)' }}>
                 <CardContent >
 
                     <div style={{ fontSize: "30px", fontWeight: "bold", textAlign: "center", textTransform: "uppercase", color: "#673ab7" }}> Login</div>
