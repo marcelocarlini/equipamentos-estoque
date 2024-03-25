@@ -11,7 +11,6 @@ function EquipLista(props) {
         axios.get("https://1ruolljjx9.execute-api.us-east-1.amazonaws.com/listar-equipamentos").then(
             r => {
                 setRows(r.data.response)
-                console.log(rows)
             }
         )
     }, [])

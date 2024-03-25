@@ -8,7 +8,7 @@ function CategoriaCadastro(props) {
 
     function cadastroCategoria() {
 
-        axios.post("https://1ruolljjx9.execute-api.us-east-1.amazonaws.com/cadastro-categoria", {
+        axios.post("https://1ruolljjx9.execute-api.us-east-1.amazonaws.com/cadastro-categorias", {
             "nome": nome,
         }).then(r => {
             alert("Categoria foi cadastrada")
