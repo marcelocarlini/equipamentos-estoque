@@ -6,7 +6,7 @@ function CategoriaCadastro(props) {
 
     const [nome, setNome] = React.useState("")
 
-    function cadastroCategoria() {
+    function cadastroCategorias() {
 
         axios.post("https://1ruolljjx9.execute-api.us-east-1.amazonaws.com/cadastro-categorias", {
             "nome": nome,
@@ -24,7 +24,7 @@ function CategoriaCadastro(props) {
                     <div style={{ fontSize: "18px", fontWeight: "bold" }}>{props.texto}</div>
                     <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
                         <TextField value={nome} onChange={(e) => { setNome(e.target.value.toUpperCase()) }} style={{ marginTop: "10px" }} id="outlined-basic" label="Nome" variant="outlined" />
-                        <Button style={{ marginTop: "10px" }} variant="contained" onClick={() => { cadastroCategoria() }}>Salvar</Button>
+                        <Button style={{ marginTop: "10px" }} variant="contained" onClick={() => { cadastroCategorias() }}>Salvar</Button>
                     </div>
                 </CardContent>
             </Card>
